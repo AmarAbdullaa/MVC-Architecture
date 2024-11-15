@@ -27,13 +27,15 @@ public function loadController()
     }
     else
     {
+        
         $filename = "../app/controllers/_404.php";
         require $filename;
         $this->controller = "_404";
 
     }
+        
         $controller = new $this->controller;
-        call_user_func_array([$controller,$this->$method],['a'=>'something','b'=>'b something']);
+        call_user_func_array([$controller,$this->method],[]);
         }
     }
 
